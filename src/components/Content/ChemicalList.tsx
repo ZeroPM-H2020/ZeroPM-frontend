@@ -59,13 +59,6 @@ const ChemicalList = () => {
                 Download .csv
               </Button>
             </div>
-            {/** 
-            <div style={{ width: "50%" }}>
-              <Button variant="contained" fullWidth>
-                Download .xls
-              </Button>
-            </div>
-            */}
           </div>
         </Grid>
       </Grid>
