@@ -16,6 +16,8 @@ React + Vite frontend for the ZeroPM Global Chemical Inventory. The app renders 
 
 ## Getting started
 
+This project uses nvm. Ensure you're on the version from `.nvmrc` before installing dependencies.
+
 ```bash
 nvm use
 npm install
