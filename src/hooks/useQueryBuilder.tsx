@@ -6,14 +6,11 @@ export interface QueryBuilderParams {
 }
 
 function useQueryBuilder(initialOptions: QueryBuilderParams) {
-  const [queryOptions, setQueryOptions] =
-    useState<QueryBuilderParams>(initialOptions);
+  const [queryOptions, setQueryOptions] = useState<QueryBuilderParams>(initialOptions);
 
   const buildQuery = (): string => {
     const { selectFields, whereConditions } = queryOptions;
-    const pmFields = selectFields.filter((field) =>
-      field.includes("pm_probabilities.")
-    );
+    const pmFields = selectFields.filter((field) => field.includes("pm_probabilities."));
     const orderedBaseFields = [
       "zeropm_chemicals.zeropm_id",
       "substances.inchi",
@@ -23,17 +20,13 @@ function useQueryBuilder(initialOptions: QueryBuilderParams) {
     const orderedSelectFields = [
       ...orderedBaseFields.filter((field) => selectFields.includes(field)),
       ...selectFields.filter(
-        (field) =>
-          !orderedBaseFields.includes(field) &&
-          !field.includes("pm_probabilities.")
+        (field) => !orderedBaseFields.includes(field) && !field.includes("pm_probabilities.")
       ),
       ...pmFields,
     ];
     const usesPmProbabilities =
       pmFields.length > 0 ||
-      whereConditions.some((condition) =>
-        condition.includes("pm_probabilities.")
-      );
+      whereConditions.some((condition) => condition.includes("pm_probabilities."));
 
     // SELECT statement
     let query = `SELECT ${orderedSelectFields.join(", ")}`;
@@ -73,9 +66,7 @@ function useQueryBuilder(initialOptions: QueryBuilderParams) {
     } else if (
       selectFields.includes("global_regions.region") &&
       !selectFields.includes("countries.country") &&
-      !whereConditions.some((string) =>
-        string.includes("global_regions.region")
-      )
+      !whereConditions.some((string) => string.includes("global_regions.region"))
     ) {
       query += " GROUP BY global_regions.region_id";
     } else {

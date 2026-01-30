@@ -18,10 +18,9 @@ const Main = () => {
 
         {/* Ingress */}
         <Typography variant="body2" style={{ whiteSpace: "pre-wrap" }}>
-          This is the beta version (v 0.9.0) of the ZeroPM database, the Global
-          Chemical Inventory. It builds on work from Wang et al. (2020). This
-          version of the database is the most current, to view olders versions
-          visit the{" "}
+          This is the beta version (v 0.9.0) of the ZeroPM database, the Global Chemical Inventory.
+          It builds on work from Wang et al. (2020). This version of the database is the most
+          current, to view olders versions visit the{" "}
           <a
             href="https://zenodo.org/communities/zeropm-h2020/records?q=&l=list&p=1&s=10&sort=newest"
             target="_blank"

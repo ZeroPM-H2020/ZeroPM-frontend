@@ -15,10 +15,9 @@ const Footer = () => {
         <Grid item xs={12} sm={6} lg={3}>
           <div>
             <Typography variant="caption" style={{ whiteSpace: "pre-wrap" }}>
-              ZeroPM is a research project funded by EU’s research and
-              innovation funding programme, Horizon 2020. ZeroPM will enable the
-              EU Green Deal‘s ambition towards Zero Pollution of Persistent,
-              Mobile Substances.
+              ZeroPM is a research project funded by EU’s research and innovation funding programme,
+              Horizon 2020. ZeroPM will enable the EU Green Deal‘s ambition towards Zero Pollution
+              of Persistent, Mobile Substances.
               {"\n"}
               {"\n"}
               ZeroPM will interlink{" "}
@@ -33,8 +32,8 @@ const Footer = () => {
               <Link href="https://zeropm.eu/remove/" target="_blank">
                 Removal
               </Link>{" "}
-              strategies to achieve it’s goals. ZeroPM will look at subgroups of
-              PMT/vPvM substances including PFAS, trazines and triazoles.
+              strategies to achieve it’s goals. ZeroPM will look at subgroups of PMT/vPvM substances
+              including PFAS, trazines and triazoles.
             </Typography>
           </div>
         </Grid>
@@ -59,9 +58,7 @@ const Footer = () => {
               />
             ))}
             <div>
-              <Typography variant="body2">
-                Norwegian Geotechnical Institute (NGI)
-              </Typography>
+              <Typography variant="body2">Norwegian Geotechnical Institute (NGI)</Typography>
               <Link href="https://www.ngi.no/en" target="_blank">
                 www.ngi.no/en
               </Link>
@@ -72,9 +69,8 @@ const Footer = () => {
           <div className="footer__eu_content__container">
             <img src="EU flag.svg" alt="EU Flag" width={"100%"} />
             <Typography variant="caption">
-              This project has received funding from the European Union’s
-              Horizon 2020 research and innovation programme under grant
-              agreement No 101036756
+              This project has received funding from the European Union’s Horizon 2020 research and
+              innovation programme under grant agreement No 101036756
             </Typography>
           </div>
         </Grid>

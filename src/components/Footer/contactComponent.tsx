@@ -11,16 +11,14 @@ export interface contactComponentProps {
   name: string;
   email: string;
 }
-const ContactComponent = ({
-  contactFunction,
-  name,
-  email,
-}: contactComponentProps) => {
+const ContactComponent = ({ contactFunction, name, email }: contactComponentProps) => {
   return (
     <div>
       <Typography variant="body2">{contactFunction}</Typography>
       {name && <Typography variant="body1">{name}</Typography>}
-      <Typography variant="body1" component={Link} href={`mailto:${email}`}>{email}</Typography>
+      <Typography variant="body1" component={Link} href={`mailto:${email}`}>
+        {email}
+      </Typography>
     </div>
   );
 };

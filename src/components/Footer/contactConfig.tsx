@@ -8,5 +8,5 @@ export const contactConfig = [
     contactFunction: "Outreach and Communication",
     name: "Sarah E. Hale",
     email: "sarah.hale@tzw.de",
-  }
+  },
 ];

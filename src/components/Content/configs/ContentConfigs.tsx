@@ -28,13 +28,15 @@ export const additionalDataConfig = [
       {
         label: "Mobile",
         info: "",
-        value: "pm_probabilities.probability_of_not_m, pm_probabilities.probability_of_m_or_vm, pm_probabilities.probability_of_m, pm_probabilities.probability_of_vm",
+        value:
+          "pm_probabilities.probability_of_not_m, pm_probabilities.probability_of_m_or_vm, pm_probabilities.probability_of_m, pm_probabilities.probability_of_vm",
         isImplemented: true,
       },
       {
         label: "Persistent",
         info: "",
-        value: "pm_probabilities.probability_of_not_p, pm_probabilities.probability_of_p_or_vp, pm_probabilities.probability_of_p, pm_probabilities.probability_of_vp",
+        value:
+          "pm_probabilities.probability_of_not_p, pm_probabilities.probability_of_p_or_vp, pm_probabilities.probability_of_p, pm_probabilities.probability_of_vp",
         isImplemented: true,
       },
     ],
@@ -47,8 +49,8 @@ export const additionalDataConfig = [
         value: "",
         info: (
           <span>
-            PubChem Compound Identification, a non-zero integer PubChem
-            accession identifier for a unique chemical structure. (Source:{" "}
+            PubChem Compound Identification, a non-zero integer PubChem accession identifier for a
+            unique chemical structure. (Source:{" "}
             <a href=" http://dx.doi.org/10.1093/nar/gkv951" target="_blank">
               doi:10.1093/nar/gkv951
             </a>
@@ -61,12 +63,9 @@ export const additionalDataConfig = [
         label: "CompTox DTXCID",
         info: (
           <span>
-            DSSTox substance identifier (DTXSID) used in the Environmental
-            Protection Agency CompTox Dashboard. (Source:{" "}
-            <a
-              href="https://www.wikidata.org/wiki/Property:P3117"
-              target="_blank"
-            >
+            DSSTox substance identifier (DTXSID) used in the Environmental Protection Agency CompTox
+            Dashboard. (Source:{" "}
+            <a href="https://www.wikidata.org/wiki/Property:P3117" target="_blank">
               https://www.wikidata.org/wiki/Property:P3117
             </a>
             )
@@ -79,10 +78,9 @@ export const additionalDataConfig = [
         label: "CAS No",
         info: (
           <span>
-            A CAS Registry Number Is a unique numeric identifier that designates
-            only one substance and has no chemical significance. It is a link to
-            a wealth of information about a specific chemical substance.
-            (Source:{" "}
+            A CAS Registry Number Is a unique numeric identifier that designates only one substance
+            and has no chemical significance. It is a link to a wealth of information about a
+            specific chemical substance. (Source:{" "}
             <a
               href="https://www.cas.org/support/documentation/chemical-substances/faqs#WhatisaCASRegistryNumberCASRN"
               target="_blank"

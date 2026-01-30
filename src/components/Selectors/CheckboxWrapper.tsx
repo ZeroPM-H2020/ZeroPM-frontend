@@ -37,7 +37,9 @@ export const CheckboxWrapper = ({
   return (
     <div className="selector__container">
       <FormControlLabel
-        control={<Checkbox checked={checked} value={value} disabled={!isImplemented} onChange={onChange}/>}
+        control={
+          <Checkbox checked={checked} value={value} disabled={!isImplemented} onChange={onChange} />
+        }
         label={label}
       />
       {info && (

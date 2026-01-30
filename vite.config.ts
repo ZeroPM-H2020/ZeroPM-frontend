@@ -8,7 +8,7 @@ export default defineConfig({
   preview: {
     port: 8080,
     strictPort: true,
-   },
+  },
   server: {
     port: 8080,
     strictPort: true,
@@ -16,10 +16,10 @@ export default defineConfig({
     origin: "http://0.0.0.0:8080",
     cors: false,
     proxy: {
-      '/zeropm': {
+      "/zeropm": {
         target: "https://datasette.zeropm.eu",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/zeropm/, ''),
+        rewrite: (path) => path.replace(/^\/zeropm/, ""),
       },
     },
   },
