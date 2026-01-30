@@ -4,10 +4,10 @@ import ChemicalList from "./Content/ChemicalList";
 // import Instructions from "./Content/Instructions";
 
 export const accordionConfig = [
- /** {
+  /** {
     title: "Instructions",
     content: <Instructions />,
-  }, */ 
+  }, */
   {
     title: "Search by chemical identifier",
     content: <ChemicalIdentifier />,

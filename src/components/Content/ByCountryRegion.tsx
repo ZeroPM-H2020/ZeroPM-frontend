@@ -14,9 +14,7 @@ import { additionalDataConfig } from "./configs/ContentConfigs";
 import { regionsConfig } from "./configs/regions";
 import { useState } from "react";
 import { countriesConfig } from "./configs/countries";
-import useQueryBuilder, {
-  QueryBuilderParams,
-} from "../../hooks/useQueryBuilder";
+import useQueryBuilder, { QueryBuilderParams } from "../../hooks/useQueryBuilder";
 
 const ByCountryRegion = () => {
   const initialQueryOptions: QueryBuilderParams = {
@@ -30,12 +28,8 @@ const ByCountryRegion = () => {
     whereConditions: [],
   };
 
-  const {
-    queryOptions,
-    buildQuery,
-    updateSelectFields,
-    updateWhereConditions,
-  } = useQueryBuilder(initialQueryOptions);
+  const { queryOptions, buildQuery, updateSelectFields, updateWhereConditions } =
+    useQueryBuilder(initialQueryOptions);
 
   // Handler for where conditions change
   const handleWhereConditions = () => {
@@ -58,7 +52,9 @@ const ByCountryRegion = () => {
       updateSelectFields(["countries.country", ...queryOptions.selectFields]);
     }
     if (value.length === 0) {
-      updateSelectFields(queryOptions.selectFields.filter(field => field !== "countries.country"));
+      updateSelectFields(
+        queryOptions.selectFields.filter((field) => field !== "countries.country")
+      );
     }
   };
 
@@ -74,7 +70,9 @@ const ByCountryRegion = () => {
       updateSelectFields(["global_regions.region", ...queryOptions.selectFields]);
     }
     if (value.length === 0) {
-      updateSelectFields(queryOptions.selectFields.filter(field => field !== "global_regions.region"));
+      updateSelectFields(
+        queryOptions.selectFields.filter((field) => field !== "global_regions.region")
+      );
     }
   };
 
@@ -83,7 +81,7 @@ const ByCountryRegion = () => {
     if (event.target.checked) {
       updateSelectFields([fieldName, ...queryOptions.selectFields]);
     } else {
-      updateSelectFields(queryOptions.selectFields.filter(field => field !== fieldName));
+      updateSelectFields(queryOptions.selectFields.filter((field) => field !== fieldName));
     }
   };
 
@@ -94,9 +92,7 @@ const ByCountryRegion = () => {
         <Grid item container gap={0}>
           <Grid item xs={12} md={6}>
             <FormControl fullWidth>
-              <InputLabel id="select-country-label">
-                Select country from list
-              </InputLabel>
+              <InputLabel id="select-country-label">Select country from list</InputLabel>
               <Select
                 labelId="select-country-label"
                 id="select-country"
@@ -116,9 +112,7 @@ const ByCountryRegion = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <FormControl fullWidth>
-              <InputLabel id="select-region-label">
-                Select region from list
-              </InputLabel>
+              <InputLabel id="select-region-label">Select region from list</InputLabel>
               <Select
                 labelId="select-region-label"
                 id="select-region"
@@ -163,8 +157,8 @@ const ByCountryRegion = () => {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="caption">
-            * Including inventory names, countries and/or regional data will
-            result in chemical appearing multiple times in different rows.
+            * Including inventory names, countries and/or regional data will result in chemical
+            appearing multiple times in different rows.
           </Typography>
         </Grid>
         <Grid item xs={12}>

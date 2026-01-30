@@ -55,7 +55,7 @@ const theme = createTheme({
     body2: {
       fontWeight: 600,
       fontSize: "clamp(1rem, 0.9107rem + 0.2381vw, 1.125rem)",
-      lineHeight: "150%"
+      lineHeight: "150%",
     },
     caption: {
       fontSize: "clamp(0.625rem, 0.5357rem + 0.2381vw, 0.75rem)",
@@ -95,10 +95,12 @@ const theme = createTheme({
       },
     },
     MuiFormControlLabel: {
-      styleOverrides:{ 
+      styleOverrides: {
         root: {
           marginRight: "0px",
-        }}},
+        },
+      },
+    },
   },
 });
 

@@ -2,9 +2,7 @@ import { Button, Grid, Link, TextField, Typography } from "@mui/material";
 import { additionalDataConfig } from "./configs/ContentConfigs";
 import { CheckboxWrapper } from "../Selectors/CheckboxWrapper";
 import { useState } from "react";
-import useQueryBuilder, {
-  QueryBuilderParams,
-} from "../../hooks/useQueryBuilder";
+import useQueryBuilder, { QueryBuilderParams } from "../../hooks/useQueryBuilder";
 
 const ChemicalIdentifier = () => {
   const [inputIdentifiers, setInputIdentifiers] = useState<string>("");
@@ -20,12 +18,8 @@ const ChemicalIdentifier = () => {
     whereConditions: [],
   };
 
-  const {
-    queryOptions,
-    buildQuery,
-    updateSelectFields,
-    updateWhereConditions,
-  } = useQueryBuilder(initialQueryOptions);
+  const { queryOptions, buildQuery, updateSelectFields, updateWhereConditions } =
+    useQueryBuilder(initialQueryOptions);
 
   const handleWhereConditions = () => {
     const whereConditonsFromInput = inputIdentifiers
@@ -44,9 +38,7 @@ const ChemicalIdentifier = () => {
     if (event.target.checked) {
       updateSelectFields([fieldName, ...queryOptions.selectFields]);
     } else {
-      updateSelectFields(
-        queryOptions.selectFields.filter((field) => field !== fieldName)
-      );
+      updateSelectFields(queryOptions.selectFields.filter((field) => field !== fieldName));
     }
   };
 
@@ -58,8 +50,8 @@ const ChemicalIdentifier = () => {
         <Grid item xs={12} md={6}>
           <Typography variant="body2">Search: </Typography>
           <Typography variant="body1">
-            Search by name or CAS No, enter the chemical identifiers below. One
-            identifier per row. Max 100 entries.
+            Search by name or CAS No, enter the chemical identifiers below. One identifier per row.
+            Max 100 entries.
           </Typography>
           <TextField
             multiline
@@ -71,7 +63,7 @@ const ChemicalIdentifier = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-        <Typography variant="body2">Include additional data: </Typography>
+          <Typography variant="body2">Include additional data: </Typography>
           {additionalDataConfig.map((additionalData, index) => (
             <div key={`chemical-list-group-${index}`}>
               <Typography variant="body1" key={`additionalData-${index}`}>
@@ -93,8 +85,8 @@ const ChemicalIdentifier = () => {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="caption">
-            * Including inventory names, countries and/or regional data will
-            result in chemical appearing multiple times in different rows.
+            * Including inventory names, countries and/or regional data will result in chemical
+            appearing multiple times in different rows.
           </Typography>
         </Grid>
         <Grid item xs={12}>

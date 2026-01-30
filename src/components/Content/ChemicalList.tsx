@@ -5,23 +5,24 @@ import useQueryBuilder, { QueryBuilderParams } from "../../hooks/useQueryBuilder
 
 const ChemicalList = () => {
   const initialQueryOptions: QueryBuilderParams = {
-    selectFields: ["substances.inchi", "substances.inchikey", "inventories.identifier", "zeropm_chemicals.zeropm_id", "sources.source_name"],
+    selectFields: [
+      "substances.inchi",
+      "substances.inchikey",
+      "inventories.identifier",
+      "zeropm_chemicals.zeropm_id",
+      "sources.source_name",
+    ],
     whereConditions: [],
   };
-  
-  const {
-    queryOptions,
-    updateSelectFields,
-  } = useQueryBuilder(initialQueryOptions);
 
-  
-  
+  const { queryOptions, updateSelectFields } = useQueryBuilder(initialQueryOptions);
+
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const fieldName = event.target.value;
     if (event.target.checked) {
       updateSelectFields([fieldName, ...queryOptions.selectFields]);
     } else {
-      updateSelectFields(queryOptions.selectFields.filter(field => field !== fieldName));
+      updateSelectFields(queryOptions.selectFields.filter((field) => field !== fieldName));
     }
   };
 
@@ -35,21 +36,21 @@ const ChemicalList = () => {
             </Typography>
             {additionalData.choices.map((choice, index) => (
               <CheckboxWrapper
-              key={`additionalData-${index}`}
-              label={choice.label}
-              info={choice.info}
-              value={choice.value}
-              checked={queryOptions.selectFields.includes(choice.value)}
-              onChange={(e) => handleCheckboxChange(e)}
-              isImplemented={choice.isImplemented}
-            />
+                key={`additionalData-${index}`}
+                label={choice.label}
+                info={choice.info}
+                value={choice.value}
+                checked={queryOptions.selectFields.includes(choice.value)}
+                onChange={(e) => handleCheckboxChange(e)}
+                isImplemented={choice.isImplemented}
+              />
             ))}
           </Grid>
         ))}
         <Grid item xs={12}>
           <Typography variant="caption">
-            * Including inventory names, countries and/or regional data will
-            result in chemical appearing multiple times in different rows.
+            * Including inventory names, countries and/or regional data will result in chemical
+            appearing multiple times in different rows.
           </Typography>
         </Grid>
         <Grid item xs={12}>

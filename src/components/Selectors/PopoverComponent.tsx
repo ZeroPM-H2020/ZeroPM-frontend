@@ -8,13 +8,7 @@ interface PopoverProps {
   id: string | undefined;
 }
 
-const PopoverComponent = ({
-  info,
-  open,
-  anchorEl,
-  handleClose,
-  id,
-}: PopoverProps) => (
+const PopoverComponent = ({ info, open, anchorEl, handleClose, id }: PopoverProps) => (
   <Popover
     id={id}
     open={open}
