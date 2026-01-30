@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid var(--grey-dark, #666565);
+  background-color: white;
+  width: 100%;
+  padding: $s-gap;
+
+  .header__content__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: clamp($s-gap, -1.0872rem + 9.5413vw, $m-gap);
+
+    .header__logo {
+      width: 200px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .header__text {
+      font-size: clamp(0.875rem, 0.7546rem + 0.5505vw, 1.25rem);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 24px */
+    }
+  }
+}

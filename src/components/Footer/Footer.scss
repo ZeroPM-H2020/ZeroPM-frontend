@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+.footer {
+  border-top: 1px solid var(--grey-dark, #666565);
+  width: 100%;
+  text-align: start;
+  background-color: white;
+  padding-top: $m-gap;
+  padding-bottom: $m-gap;
+  padding-left: clamp(1rem, -1.0872rem + 9.5413vw, 7.5rem);
+  padding-right: clamp(1rem, -1.0872rem + 9.5413vw, 7.5rem);
+  display: flex;
+  flex-direction: column;
+
+  .logo__container {
+    min-width: 200px;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: $m-gap;
+  }
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.footer__eu_content__container {
+  gap: $xs-gap;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__content__container {
+  gap: $m-gap;
+  display: flex;
+  flex-direction: column;
+}
