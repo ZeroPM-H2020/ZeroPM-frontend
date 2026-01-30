@@ -17,6 +17,7 @@ React + Vite frontend for the ZeroPM Global Chemical Inventory. The app renders 
 ## Getting started
 
 ```bash
+nvm use
 npm install
 npm run dev
 ```
@@ -29,6 +30,7 @@ The dev server runs on port 8080 by default.
 - `npm run build` — typecheck and build production assets
 - `npm run preview` — preview the production build on port 8080
 - `npm run lint` — run ESLint
+- `npm run format` — format the codebase with Prettier
 
 ## Configuration
 
@@ -40,7 +42,7 @@ The dev server proxies `/zeropm` to the ZeroPM Datasette host. Update the proxy 
 - `src/components/Content/configs` — content configs (countries, regions, copy)
 - `src/hooks` — query builder hook
 - `src/styles` — theme and shared SCSS variables
-- `src/api` — API utilities (currently unused)
+- `src/assets` — static assets used by the app
 
 ## License
 
